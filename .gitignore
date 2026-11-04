@@ -1,4 +1,25 @@
-.vs/
+# React / Node.js
+node_modules/
+dist/
+build/
+
+# .NET
 bin/
 obj/
-node_modules/s
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.tmp
+*.temp
