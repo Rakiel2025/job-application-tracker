@@ -104,5 +104,29 @@
     <li>Start the React application using npm run dev</li>
 </ol>
 
+## Screenshots
 
+### Dashboard
+
+![Dashboard](screenshots/dashboard.jpg)
+
+### Applications
+
+![Applications](screenshots/applications.jpg)
+
+### Add Application
+
+![Add Application](screenshots/add-application.jpg)
+
+### Application Details
+
+![Application Details](screenshots/application-details.jpg)
+
+### Edit Application
+
+![Edit Application](screenshots/edit-application.jpg)
+
+### Delete Confirmation
+
+![Delete Confirmation](screenshots/delete-confirmation.jpg)
 
