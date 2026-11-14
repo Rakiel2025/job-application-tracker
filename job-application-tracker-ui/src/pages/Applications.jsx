@@ -20,7 +20,7 @@ export default function Applications() {
         
         // PASTE THE FETCH CODE HERE
         const response = await fetch(
-          "https://localhost:7034/api/JobApplications" // Make sure your port matches your C# backend port!
+          "https://job-application-tracker-api-inhh.onrender.com/api/JobApplications" // Make sure your port matches your C# backend port!
         );
 
         if (!response.ok) {

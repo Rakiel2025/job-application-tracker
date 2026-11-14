@@ -811,3 +811,78 @@ form, .add-form {
   width: 100%;
   overflow-x: auto; /* Enables smooth horizontal scrolling on smaller screens */
 }
+
+/* Semi-transparent overlay to dim the page */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal dialog box */
+.modal-box {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-box h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.modal-job-preview {
+  background-color: #f1f3f5;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media screen and (max-width: 768px) {
+  /* Make app container stack vertically if needed */
+  .app-container {
+    flex-direction: column;
+  }
+
+  /* Adjust form container width to fit mobile screens */
+  .add-form, .modal-box {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  /* Make tables horizontally scrollable on small screens */
+  .recent-section {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Stack modal action buttons vertically on mobile if tight */
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -23,7 +23,7 @@ export default function EditApplication() {
     const fetchApplication = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`https://localhost:7034/api/JobApplications/${id}`);
+        const response = await fetch(`https://job-application-tracker-api-inhh.onrender.com/api/JobApplications/${id}`);
         if (!response.ok) throw new Error("Failed to fetch application data.");
         
         const data = await response.json();
@@ -65,7 +65,7 @@ export default function EditApplication() {
   };
 
     try {
-      const response = await fetch(`https://localhost:7034/api/JobApplications/${id}`, {
+      const response = await fetch(`https://job-application-tracker-api-inhh.onrender.com/api/JobApplications/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ export default function Dashboard() {
 
   // Fetch data to calculate metrics dynamically
   useEffect(() => {
-    fetch("https://localhost:7034/api/JobApplications")
+    fetch("https://job-application-tracker-api-inhh.onrender.com/api/JobApplications")
       .then((res) => res.json())
       .then((data) => {
         setApplications(data);

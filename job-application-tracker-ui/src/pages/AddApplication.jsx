@@ -70,7 +70,7 @@ const handleSubmit = async (e) => {
 
   try {
     // 2. Send request to your API with the correct /api/ path
-    const response = await fetch("https://localhost:7034/api/JobApplications", {
+    const response = await fetch("https://job-application-tracker-api-inhh.onrender.com/api/JobApplications", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

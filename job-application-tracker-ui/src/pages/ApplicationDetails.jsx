@@ -15,7 +15,7 @@ export default function ApplicationDetails() {
     const fetchApplicationDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`https://localhost:7034/api/JobApplications/${id}`);
+        const response = await fetch(`https://job-application-tracker-api-inhh.onrender.com/api/JobApplications/${id}`);
         if (!response.ok) throw new Error("Failed to fetch application details.");
         const data = await response.json();
         setApplication(data);
@@ -34,7 +34,7 @@ export default function ApplicationDetails() {
   // Handle application deletion
   const handleDelete = async () => {
     try {
-      const response = await fetch(`https://localhost:7034/api/JobApplications/${id}`, {
+      const response = await fetch(`https://job-application-tracker-api-inhh.onrender.com/api/JobApplications/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) throw new Error("Failed to delete application.");
