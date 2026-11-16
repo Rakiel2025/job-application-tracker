@@ -1,6 +1,7 @@
 using JobApplicationTracker.API.Data;
 using Microsoft.EntityFrameworkCore;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -28,17 +29,18 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-
-app.UseCors("FrontendPolicy");
-
-// Configure the HTTP request pipeline.
+/*
 if (app.Environment.IsDevelopment())
 {
-
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+*/
+// app.UseHttpsRedirection(); // Keep this commented out on Render
 
-app.UseHttpsRedirection();
+app.UseRouting();
+
+app.UseCors("FrontendPolicy");
 
 app.UseAuthorization();
 
