@@ -5,26 +5,16 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// 1. Controllers
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 
-// 2. Entity Framework Core & SQL Server
-builder.Services.AddDbContext<ApplicationDbContext>(
-    options => options.UseNpgsql(
-        builder.Configuration.GetConnectionString(
-            "DefaultConnection")));
-
-// 3. CORS Configuration[cite: 10]
+// Define CORS policy for your Vercel frontend
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontendPolicy", policy =>
     {
-        policy
-            .WithOrigins("https://job-application-tracker-rakiel.vercel.app")
-            .AllowAnyHeader()
-            .AllowAnyMethod();
+        policy.WithOrigins("https://job-application-tracker-rakiel.vercel.app")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
     });
 });
 
